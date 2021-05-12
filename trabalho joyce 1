@@ -1,0 +1,140 @@
+// Yago Ribeiro de Olveira //  UC21102416  // Engenharia de Software 
+#include <stdio.h> //biblioteca para printf e scanf 
+#include <string.h> //biblioteca para strlen e strcmp
+#include <ctype.h> //biblioteca para o uso do toupper e tolower
+#include <stdlib.h>// biblioteca de formataçao
+#include <locale.h> // biblioteca de acentos
+ #include <conio.h>// biblioteca para para fornecer entrada / saída
+ 
+int main(){ // Função main pode retorna o inteiro para o sisema
+	setlocale(LC_ALL,"Portuguese");
+	 
+    char filme[101], sexo[2], nome [61],masculino, feminino;  // para armazenar UM ou varios dados 
+    int sessoes, quantas, pessoas, a, b, c, d, e, f, g, h, i ,j, k , l ,m , n , o , p ,q, idade, r, y, r1, r2, z, I; //  armazena valores numéricos inteiros
+
+    printf("Ola Seja bem-vindo ao cinema Catolicaflix \n\n"); // recebendo o cliente 
+    printf("Preciso de algumas informações depois do filme \n\n"); // interagindo com o usuario 
+    
+do{ // repetir a informação dentro while 
+
+
+    printf("Solicite quantas sessoes voces desejam: \n"); //interagir com usuario 
+    scanf("%d", &sessoes);//ler a funcao que o usuario pede 
+    fflush(stdin);//limpar o buffer de entrada  
+    if (sessoes !=2) { // a condicao que a sessao tem que ser somente 2 
+    printf("Numero de sessoes excedidas\n");  //caso o numero de sessoes for menor ou maior que 2 consta como erro
+    }else{  // caso se  for menor de 
+    printf("Proximo\n"); // Passa pra proxima etapa do programa
+    } 
+    }while(sessoes !=2);    // fim da repetição do "do"
+    
+do{// repetir a informação dentro while 
+    printf ("\nDigite o nome do filme  \n");  // interação com usuario  
+    fgets (filme, 100, stdin);  // fgets Para se ler uma string num arquivo 
+    fflush(stdin); // limpar buffer de entrada
+    if(strlen(filme) <= 1){ // ele vai passar caso filme seja diferente de "vazio" 
+    printf("\nNome invalido!, tente novamente\n"); // caso de erro pra tenta novamente 
+    }else{ // caso nao escreva nada,nao passa pra proxima fase 
+    printf ("Proxima etapa \n"); // fase seguinte do programa  
+}
+    }while (strlen(filme) <= 1);   // fim da repetição do "do"
+    
+do{ // repetir a informação dentro while 
+ 
+    printf("Quantas pessoas assistiram o filme \n"); //interacao com usuario sobre as infomações 
+    scanf ("%d" ,&pessoas);  // ler quantas pessoas assistiram o filme 
+    fflush(stdin); // limpar teclado 
+    if(pessoas<10){ // caso entre 10 pessoas passa pra proxima fase 
+    printf("\n  invalido!, tente novamente \n"); //falando pro usuario se for menos de 10 pessoas nao rodar o programa 
+    }else{  // caso for menos de 10 pessoas nao rodar o programa 
+    printf ("Proxima etapa \n\n"); // proxima etapa do projeto
+}
+}while(pessoas<10); // fim da repetição do "do"
+
+
+	printf("Quantas pessoas eram mulheres \n"); //  interagir com o usuario sobre quantas mulheres entraram  na sala de cinema 
+	scanf ("%d",&a);  // conta pra saber o resto
+	fflush(stdin);//limpar o buffer de entrada
+    (b=pessoas-a); // falando as variavel
+	
+    printf("logo o total de homens = %d \n\n" , b );  // função logo simples que ja resumir quantos homens tinha 
+      
+
+
+    printf("Quais dessas %d mulheres tinham entre 3 a 13 anos de idade  \n ",a); // interação com o usuario sobre a idade 
+	scanf("%d",&h); // conta pra saber o resto
+	fflush(stdin);//limpar o buffer de entrada
+	(q = a - h);  // conta pra saber o resto
+	
+	printf("Quais dessas %d mulheres tinham entre 14 a 17 anos de idade \n",q); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);// conta pra saber o resto
+	scanf("%d",&i); // falando as variaveis 
+	(h = q - i);// conta pra saber o resto
+	
+	printf("Quais dessas %d mulheres tinham entre 18 a 64 anos de idade \n",h); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);// conta pra saber o resto
+	scanf("%d",&j);// falando as variaveis 
+	fflush(stdin); //limpar o buffer de entrada
+	(i = h - j);// conta pra saber o resto
+	
+	printf("Quais  dessas %d mulheres tinham entre 65 a 100 anos de idade \n",i); // interação com o usuario sobre a idade 
+	//scanf("%d",&h); // conta pra saber o resto
+	scanf("%d",&z); // falando as variaveis 
+	fflush(stdin); //limpar o buffer de entrada
+	(j = i - z);// conta pra saber o resto
+	
+	
+	
+	
+	printf("Quais desses %d homens tinham entre 3 a 13 anos de idade  \n ",b); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);  // conta pra saber o resto
+	fflush(stdin); //limpar o buffer de entrada
+	scanf("%d",&c); // falando as variaveis 
+	(d = b - c); // conta pra saber o resto
+	
+	printf("Quais  desses %d homens tinham entre 14 a 17 anos de idade \n",d); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);// conta pra saber o resto
+	fflush(stdin); //limpar o buffer de entrada
+	scanf("%d",&m);// falando as variaveis 
+     (e = d - m);// conta pra saber o resto
+	
+	printf("Quais  desses %d homens tinham entre 18 a 64 anos de idade \n",e); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);// conta pra saber o resto
+	fflush(stdin); //limpar o buffer de entrada
+	scanf("%d",&c);// falando as variaveis 
+	(f = e - c);// conta pra saber o resto
+	
+	printf("Quais  desses %d  homens tinham entre 65 a 100 anos de idade \n",f); // interação com o usuario sobre a idade 
+	//scanf("%d",&h);// conta pra saber o resto
+	fflush(stdin); //limpar o buffer de entrada
+	scanf("%d",&k);// conta pra saber o resto
+    
+    system("pause"); // pausa a janela até que o usuario pressione alguma tecla
+    system("cls"); // janela limpa
+	 
+	printf("Segue a tabela do filme \n"); // informação sobre o filme 
+	printf("__\n");
+    
+    (r1 = h); // resultado da equação 
+	printf("numero de mulheres maior de idade  \n %d \n ", r1);  // interação com o usuario sobre a idade 
+	//scanf("%d",&h);
+	getch();
+	
+	(r2 = e ); // resultado da equação 
+    printf("numero de homens maior de idade   \n %d \n ", r2);  // interação com o usuario sobre a idade 
+	//scanf("%d",&h); // lendo a variavel de resposta 
+    getch();
+    
+    
+    for (I=0; I < 1; I++) //  quantas vezes a repetição deverá ser executada
+  {
+    printf("a pessoa com a cadeira %d foi sorteada para uma semana gratis no cinema com combos de pipoca \n", rand() % a);  // bonus para o usuaio 
+  }
+    
+    printf(" Volte sempre a Catolicaflix \n") ; // despedida do cinema 
+    
+  getch(); // espera que o usuário digite uma tecla e retorna este caractere
+  
+  return 0; // fim do programa 
+
+}
